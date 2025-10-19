@@ -4,11 +4,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.14.36429.23 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
-	ProjectSection(SolutionItems) = preProject
-		Bai01.cs = Bai01.cs
-	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BHT2_LeHoangQuan_24521432", "BHT2_LeHoangQuan_24521432\BHT2_LeHoangQuan_24521432.csproj", "{CCD2F00F-76D1-4C08-B51B-2108E110C2BC}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCD2F00F-76D1-4C08-B51B-2108E110C2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD2F00F-76D1-4C08-B51B-2108E110C2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD2F00F-76D1-4C08-B51B-2108E110C2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD2F00F-76D1-4C08-B51B-2108E110C2BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
