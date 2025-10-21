@@ -93,12 +93,13 @@ namespace Bai03
         public void PrintPrimeNum()
         {
             Console.Write("List of Prime Numbers in Matrix: ");
-            List<int> result = new List<int>();
+            HashSet<int> result = new HashSet<int>();
             for (int i = 0; i < LMatrix.Count; i++)
             {
                 for (int j = 0; j < LMatrix[i].Count; j++)
                     if (isPrimeNum(LMatrix[i][j]))
-                        result.Add(LMatrix[i][j]);
+                        if (!result.Contains(LMatrix[i][j]))
+                            result.Add(LMatrix[i][j]);
             }
             if (result.Count == 0)
                 Console.WriteLine("None");
@@ -107,7 +108,7 @@ namespace Bai03
         }
         public void PrintRowMostPrimeNum()
         {
-            Console.Write("Row with most  prime number: ");
+            Console.Write("Row with most prime number: ");
             int num, max = -1;
             List<int> result = new List<int>();
             for (int i = 0; i < LMatrix.Count;  ++i)
@@ -121,10 +122,11 @@ namespace Bai03
                 if (num > max || max == -1)
                 {
                     result.Clear();
-                    result.Add(i);
+                    result.Add(i + 1);
+                    max = num;
                 }
                 else if (num == max)
-                    result.Add((int) num);
+                    result.Add((int) i + 1);
             }
             Console.WriteLine(string.Join (", ", result.ToArray()));
         }
