@@ -3,6 +3,7 @@ using System.Linq.Expressions;
 using Bai01;
 using Bai02;
 using Bai03;
+using Bai04;
 
 namespace Program
 {
@@ -18,10 +19,13 @@ namespace Program
             //B2 b2 = new B2();
             //b2.Run();
             //Console.WriteLine("----------------------");
-            Console.WriteLine("Bai 3: ");
-            B3 b3 = new B3();
-            b3.Run();
-
+            //Console.WriteLine("Bai 3: ");
+            //B3 b3 = new B3();
+            //b3.Run();
+            //Console.WriteLine("----------------------");
+            Console.WriteLine("Bai 4: ");
+            B4 b4 = new B4();
+            b4.Run();
         }
     }
 }
