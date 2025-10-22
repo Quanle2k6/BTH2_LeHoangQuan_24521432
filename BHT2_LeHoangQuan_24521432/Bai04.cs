@@ -218,16 +218,16 @@ namespace Bai04
     {
         public void Run()
         {
-            //Console.WriteLine("Nhap phan so 1");
-            //PhanSo ps1 = new PhanSo();
-            //ps1.Input();
-            //Console.WriteLine("Nhap phan so 2");
-            //PhanSo ps2 = new PhanSo();
-            //ps2.Input();
-            //Console.WriteLine($"{ps1.Output()} + {ps2.Output()} = {(ps1 + ps2).Output()}");
-            //Console.WriteLine($"{ps1.Output()} - {ps2.Output()} = {(ps1 - ps2).Output()}");
-            //Console.WriteLine($"{ps1.Output()} * {ps2.Output()} = {(ps1 * ps2).Output()}");
-            //Console.WriteLine($"{ps1.Output()} / {ps2.Output()} = {(ps1 / ps2).Output()}");
+            Console.WriteLine("Nhap phan so 1");
+            PhanSo ps1 = new PhanSo();
+            ps1.Input();
+            Console.WriteLine("Nhap phan so 2");
+            PhanSo ps2 = new PhanSo();
+            ps2.Input();
+            Console.WriteLine($"{ps1.Output()} + {ps2.Output()} = {(ps1 + ps2).Output()}");
+            Console.WriteLine($"{ps1.Output()} - {ps2.Output()} = {(ps1 - ps2).Output()}");
+            Console.WriteLine($"{ps1.Output()} * {ps2.Output()} = {(ps1 * ps2).Output()}");
+            Console.WriteLine($"{ps1.Output()} / {ps2.Output()} = {(ps1 / ps2).Output()}");
             DayPhanSo dayPhanSo = new DayPhanSo();
             dayPhanSo.Input();
             dayPhanSo.Output();
