@@ -181,7 +181,7 @@ namespace Bai01
             int Month, Year;
             while (true)
             {
-                Console.Write("Month: ");
+                Console.Write("Month (MM/YYYY): ");
                 string inputMonth = Console.ReadLine();
                 if (inputMonth == null)
                 {
