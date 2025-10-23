@@ -76,7 +76,7 @@ namespace Bai03
                 for (int j = 0; j < LMatrix[i].Count; j++)
                 {
                     if (LMatrix[i][j] == X)
-                        result.Add((i, j));
+                        result.Add((i + 1, j + 1));
                 }
             }
             return result;
@@ -109,7 +109,7 @@ namespace Bai03
         public void PrintRowMostPrimeNum()
         {
             Console.Write("Row with most prime number: ");
-            int num, max = -1;
+            int num, max = 0;
             List<int> result = new List<int>();
             for (int i = 0; i < LMatrix.Count;  ++i)
             {
@@ -119,7 +119,7 @@ namespace Bai03
                     if (isPrimeNum(LMatrix[i][j]))
                         num++;
                 }
-                if (num > max || max == -1)
+                if (num > max)
                 {
                     result.Clear();
                     result.Add(i + 1);
@@ -128,7 +128,10 @@ namespace Bai03
                 else if (num == max)
                     result.Add((int) i + 1);
             }
-            Console.WriteLine(string.Join (", ", result.ToArray()));
+            if (max == 0)
+                Console.WriteLine("None");
+            else
+                Console.WriteLine(string.Join (", ", result.ToArray()));
         }
 
     }

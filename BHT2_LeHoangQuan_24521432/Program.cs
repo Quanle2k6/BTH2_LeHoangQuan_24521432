@@ -24,12 +24,12 @@ namespace Program
             //B3 b3 = new B3();
             //b3.Run();
             //Console.WriteLine("----------------------");
-            //Console.WriteLine("Bai 4: ");
-            //B4 b4 = new B4();
-            //b4.Run();
+            Console.WriteLine("Bai 4: ");
+            B4 b4 = new B4();
+            b4.Run();
             //Console.WriteLine("----------------------");
-            B5 b5 = new B5();
-            b5.Run();
+            //B5 b5 = new B5();
+            //b5.Run();
         }
     }
 }

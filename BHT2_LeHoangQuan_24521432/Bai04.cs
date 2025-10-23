@@ -11,7 +11,7 @@ namespace Bai04
     {
         internal int iTuSo { get; set; }
         internal int iMauSo { get; set; }
-        internal PhanSo(int iTu = 0, int iMau = 1)
+        public PhanSo(int iTu = 0, int iMau = 1)
         {
             iTuSo = iTu;
             iMauSo = iMau;
@@ -40,7 +40,7 @@ namespace Bai04
             {
                 Console.Write("Nhap mau so: ");
                 temp = Console.ReadLine();
-                if (int.TryParse(temp, out iMau))
+                if (int.TryParse(temp, out iMau) && iMau != 0)
                 {
                     iMauSo = (int)iMau;
                     break;
@@ -165,22 +165,17 @@ namespace Bai04
                 Console.Write(", ");
             }
         }
-        public List<PhanSo> TimPhanSoLonNhat()
+        public PhanSo TimPhanSoLonNhat()
         {
-            List<PhanSo> result = new List<PhanSo>();
             PhanSo max = Day[0];
             for (int i = 1; i < Day.Count; i++)
             {
                 if (max.getGiaTri() < Day[i].getGiaTri())
                 {
-                    result.Clear();
-                    result.Add(Day[i]);
                     max = Day[i];
                 }
-                else if (max.getGiaTri() == Day[i].getGiaTri())
-                    result.Add(Day[i]);
             }
-            return result;
+            return max;
         }
         private void QuickSort(int l, int r)
         {
@@ -227,22 +222,16 @@ namespace Bai04
             Console.WriteLine($"{ps1.Output()} + {ps2.Output()} = {(ps1 + ps2).Output()}");
             Console.WriteLine($"{ps1.Output()} - {ps2.Output()} = {(ps1 - ps2).Output()}");
             Console.WriteLine($"{ps1.Output()} * {ps2.Output()} = {(ps1 * ps2).Output()}");
+            if (ps2.getGiaTri() != 0)
             Console.WriteLine($"{ps1.Output()} / {ps2.Output()} = {(ps1 / ps2).Output()}");
+            else
+                Console.WriteLine($"Khong the chia cho 0");
+
             DayPhanSo dayPhanSo = new DayPhanSo();
             dayPhanSo.Input();
             dayPhanSo.Output();
-            Console.Write("Phan so lon nhat: ");
-            List<PhanSo> max = dayPhanSo.TimPhanSoLonNhat();
-            for (int i = 0; i < max.Count; i++)
-            {
-                Console.Write(max[i].Output());
-                if (i == max.Count - 1)
-                {
-                    Console.WriteLine();
-                    break;
-                }
-                Console.Write(", ");
-            }
+            PhanSo max = dayPhanSo.TimPhanSoLonNhat();
+            Console.WriteLine($"Phan so lon nhat: {max.Output()}");
             Console.WriteLine("Dang sap day phan so tang...");
             dayPhanSo.SapXep();
             dayPhanSo.Output();
